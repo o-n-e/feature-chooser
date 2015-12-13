@@ -26,7 +26,7 @@ This application shows one way to build a filter string from various selected va
   an angular application.
 
 
-## Development with angular-phonecat
+## Development with feature-chooser
 
 The following docs describe how you can test and develop further this application.
 
