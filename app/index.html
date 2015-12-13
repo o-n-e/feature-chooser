@@ -1,25 +1,23 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="featureChooserApp">
 <head>
   <meta charset="utf-8">
   <title>My HTML File</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css">
   <script src="bower_components/angular/angular.js"></script>
+  <script src="js/controllers.js"></script>
 </head>
-<body>
+<body ng-controller="FeatureCtrl">
 
 <h4>Available Features</h4>
 <P>
-<select size="5" multiple style="width: 200px">
-  <option value="age">Age</option>
-  <option value="colour">Colour</option>
-  <option value="date">Date</option>
-  <option value="featureX">Feature X</option>
-  <option value="featureY">Feature Y</option>
-  <option value="size">Size</option>
-</select>
-</P>
+  <li ng-repeat="feature in availibleFeatures">
+    <span>{{feature.name}}</span>
+    <p>{{feature.displayName}}</p>
+  </li>
 
 </body>
 </html>
+
+<!-- | filter:{category:'feature'}-->

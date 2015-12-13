@@ -1,3 +1,4 @@
-2. Show a static list of values
+3. Make the list dynamic
 
 x 1. Show something in the browser.
+x 2. Show a static list of values
