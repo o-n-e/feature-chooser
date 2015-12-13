@@ -1,1 +1,3 @@
-1. Show something in the browser.
+2. Show a static list of values
+
+x 1. Show something in the browser.
