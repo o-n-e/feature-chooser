@@ -1,4 +1,4 @@
-4. The app now has a search box. Notice that the phone list on the page changes depending on what a user types into the search box.
+4. The app now has a search box. Notice that the list on the page changes depending on what a user types into the search box.
 
 x 1. Show something in the browser.
 x 2. Show a static list of values
