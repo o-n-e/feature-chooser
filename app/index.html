@@ -10,14 +10,28 @@
 </head>
 <body ng-controller="FeatureCtrl">
 
-<h4>Available Features</h4>
-<P>
-  <li ng-repeat="feature in availibleFeatures">
-    <span>{{feature.name}}</span>
-    <p>{{feature.displayName}}</p>
-  </li>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      Search: <input ng-model="query">
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <ul class="phones">
+        <li ng-repeat="feature in availibleFeatures | filter:query">
+          {{feature.name}}
+          <p>{{feature.displayName}}</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
 
-<!-- | filter:{category:'feature'}-->
