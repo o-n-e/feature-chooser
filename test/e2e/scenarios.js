@@ -15,10 +15,10 @@ describe('featureChooser', function() {
       var availableFeaturesList = element.all(by.repeater('feature in availibleFeatures'));
       var query = element(by.model('query'));
 
-      expect(availableFeaturesList.count()).toBe(6);
+      expect(availableFeaturesList.count()).toBe(10);
 
       query.sendKeys('col');
-      expect(availableFeaturesList.count()).toBe(1);
+      expect(availableFeaturesList.count()).toBe(2);
 
       query.clear();
       query.sendKeys('date');
@@ -36,18 +36,18 @@ describe('featureChooser', function() {
         });
       }
 
-      query.sendKeys('date'); //let's narrow the dataset to make the test assertions shorter
+      query.sendKeys('s'); //let's narrow the dataset to make the test assertions shorter
 
       expect(getNames()).toEqual([
-        "Date",
-        "Calculation Date"
+        "Symbol",
+        "Size"
       ]);
 
       element(by.model('orderProp')).element(by.css('option[value="displayName"]')).click();
 
       expect(getNames()).toEqual([
-        "Calculation Date",
-        "Date"
+        "Size",
+        "Symbol"
       ]);
 
     });

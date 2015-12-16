@@ -34,5 +34,29 @@
     "name": "price",
     "displayName": "Price",
     "category": "data"
+  },
+  {
+    "id": 7,
+    "name": "direction",
+    "displayName": "Direction",
+    "category": "feature"
+  },
+  {
+    "id": 8,
+    "name": "symbol",
+    "displayName": "Symbol",
+    "category": "feature"
+  },
+  {
+    "id": 9,
+    "name": "colour",
+    "displayName": "Colour",
+    "category": "feature"
+  },
+  {
+    "id": 10,
+    "name": "size",
+    "displayName": "Size",
+    "category": "feature"
   }
 ]
