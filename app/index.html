@@ -17,13 +17,19 @@
 
       Search: <input ng-model="query">
 
+      <p>Sort by:
+      <select ng-model="orderProp">
+        <option value="id">ID</option>
+        <option value="displayName">Display Name</option>
+      </select>
+
     </div>
     <div class="col-md-10">
       <!--Body content-->
 
-      <ul class="phones">
-        <li ng-repeat="feature in availibleFeatures | filter:query">
-          {{feature.name}}
+      <ul class="features">
+        <li ng-repeat="feature in availibleFeatures | filter:query | orderBy:orderProp">
+          {{feature.id}}
           <p>{{feature.displayName}}</p>
         </li>
       </ul>
