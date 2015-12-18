@@ -28,14 +28,12 @@
       <!--Body content-->
 
       <h1>Available Features</h1>
-      <select size="5" multiple ng-model="available" ng-options="feature as feature.displayName for feature in availibleFeatures" style="width: 400px"></select>
-
-      <ul class="features">
-        <li ng-repeat="feature in availibleFeatures | filter:query | orderBy:orderProp">
-          {{feature.id}}
-          <p>{{feature.displayName}}</p>
-        </li>
-      </ul>
+      <select size="5"
+              multiple
+              ng-model="available"
+              ng-options="feature as feature.displayName for feature in availibleFeatures | filter:query | orderBy:orderProp"
+              style="width: 400px"
+      ></select>
 
     </div>
   </div>
