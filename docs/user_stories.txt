@@ -1,4 +1,4 @@
-7. Show the features in a 5 high multi select
+
 
 
 - backlog
@@ -12,3 +12,4 @@ x 3. Make the list dynamic
 x 4. The app now has a search box. Notice that the list on the page changes depending on what a user types into the search box
 x 5. Add a dropdown to order the list results
 x 6. There is now a list of features loaded from the server
+x 7. Show the features in a 5 high multi select
