@@ -13,13 +13,13 @@ describe('featureChooser', function() {
 
     it('should filter the available features list as a user types into the search box', function() {
 
-      var allOptions = element.all(by.options('feature as feature.displayName for feature in availibleFeatures | filter:query | orderBy:orderProp'));
+      var allOptions = element.all(by.options('feature as feature.displayName for feature in availibleFeatures | filter:availableFeaturesQuery | orderBy:orderProp'));
       expect(allOptions.count()).toEqual(10);
 
       var firstOption = allOptions.first();
       expect(firstOption.getText()).toEqual('Calculation Date');
 
-      var query = element(by.model('query'));
+      var query = element(by.model('availableFeaturesQuery'));
       query.sendKeys('p');
 
       expect(allOptions.count()).toEqual(1);
@@ -29,9 +29,9 @@ describe('featureChooser', function() {
 
     it('should be possible to control feature order via the drop down select box', function() {
 
-      var allOptions = element.all(by.options('feature as feature.displayName for feature in availibleFeatures | filter:query | orderBy:orderProp'));
+      var allOptions = element.all(by.options('feature as feature.displayName for feature in availibleFeatures | filter:availableFeaturesQuery | orderBy:orderProp'));
 
-      var query = element(by.model('query'));
+      var query = element(by.model('availableFeaturesQuery'));
       query.sendKeys('s')
 
       var firstOption = allOptions.first();

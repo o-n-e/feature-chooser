@@ -1,4 +1,4 @@
-9. Style it!
+10. Add Selected Features box
 
 - backlog
 
@@ -10,4 +10,5 @@ x 4. The app now has a search box. Notice that the list on the page changes depe
 x 5. Add a dropdown to order the list results
 x 6. There is now a list of features loaded from the server
 x 7. Show the features in a 5 high multi select
-8. Make the page work without the list
+x 8. Make the page work without the list
+x 9. Style it!

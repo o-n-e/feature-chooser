@@ -19,21 +19,52 @@
     </select>
 
   <div class="row">
-  <p>
+
     <div class="col-xs-2">
       <h4>Available Features</h4>
-      Search: <input ng-model="query"></p>
-<p>
-      <select size="5"
+      <p>
+        <input ng-model="availableFeaturesQuery"
+                     style="width: 200px"></p>
+      <p>
+      <select size="10"
               multiple
               ng-model="available"
-              ng-options="feature as feature.displayName for feature in availibleFeatures | filter:query | orderBy:orderProp"
+              ng-options="feature as feature.displayName for feature in availibleFeatures | filter:availableFeaturesQuery | orderBy:orderProp"
               style="width: 200px">
 
       </select></p>
     </div>
 
-  </div>
+    <div class="col-xs-1">
+      <button type="button"
+              class="btn btn-default, firstbutton"
+              ng-click="moveItem(selected[0], availableFeatures, selectedFeatures)">
+        <span class="glyphicon glyphicon-arrow-right"></span>
+      </button>
+      <button type="button"
+              class="btn btn-default, secondbutton"
+              ng-click="moveItem(selected[0], selectedFeatures, availableFeatures)">
+        <span class="glyphicon glyphicon-arrow-left"></span>
+      </button>
+    </div>
+
+    <div class="col-xs-2">
+      <h4>Required Features</h4>
+      <p>
+        <input ng-model="selectedFeaturesQuery"
+                        style="width: 200px"></p>
+      <p>
+        <select size="10"
+                multiple
+                ng-model="selected"
+                ng-options="feature as feature.displayName for feature in selectedFeatures | filter:selectedFeaturesQuery | orderBy:orderProp"
+                style="width: 200px">
+
+        </select></p>
+    </div>
+
+
+
 
 </div>
 
