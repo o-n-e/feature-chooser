@@ -1,8 +1,6 @@
-
+9. Style it!
 
 - backlog
-Style it!
-
 
 - complete -
 x 1. Show something in the browser

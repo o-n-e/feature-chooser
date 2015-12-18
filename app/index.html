@@ -10,33 +10,31 @@
 </head>
 <body ng-controller="FeatureCtrl">
 
-<div class="container-fluid">
+<div class="container">
+
+  <p>Sort by:
+    <select ng-model="orderProp">
+      <option value="id">ID</option>
+      <option value="displayName">Display Name</option>
+    </select>
+
   <div class="row">
-    <div class="col-md-2">
-      <!--Sidebar content-->
-
-      Search: <input ng-model="query">
-
-      <p>Sort by:
-      <select ng-model="orderProp">
-        <option value="id">ID</option>
-        <option value="displayName">Display Name</option>
-      </select>
-
-    </div>
-    <div class="col-md-10">
-      <!--Body content-->
-
-      <h1>Available Features</h1>
+  <p>
+    <div class="col-xs-2">
+      <h4>Available Features</h4>
+      Search: <input ng-model="query"></p>
+<p>
       <select size="5"
               multiple
               ng-model="available"
               ng-options="feature as feature.displayName for feature in availibleFeatures | filter:query | orderBy:orderProp"
-              style="width: 400px"
-      ></select>
+              style="width: 200px">
 
+      </select></p>
     </div>
+
   </div>
+
 </div>
 
 </body>
